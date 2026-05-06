@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAV Gaming</title>
 
+    <style>
+        body {
+            margin: 0;
+            background: #0f0f0f;
+            color: white;
+            font-family: Arial;
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 20px;
+            font-size: 24px;
+            color: #a855f7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-box {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #a855f7;
+            border: none;
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #9333ea;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    RAV Gaming 🎮
+    <button onclick="toggleLogin()">Login</button>
+</header>
+
+<div class="login-box" id="loginBox">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<div class="container">
+    <h1>Welcome to RAV Gaming</h1>
+    <p>أفضل مكان لتجمع القيمرز 🔥</p>
+</div>
+
+<script>
+function toggleLogin() {
+    const box = document.getElementById("loginBox");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if (user === "admin" && pass === "1234") {
+        alert("تم تسجيل الدخول 🔥");
+    } else {
+        alert("بيانات غلط ❌");
+    }
+}
+</script>
+
+</body>
+</html>
